@@ -29,18 +29,50 @@
 
 # print('sum: ', sum, 'mul:', mul)
 
+# ==============================================
+
+# THIS LOGIC BRUTE FORCE WAS RIGHT, BUT INNEFFICIENT FOR LARGER N 
+
+# N = int(input())
+# tempN = N
+# N -=1
+# start = 10**(N)
+# end = 9
+# while N!=0:
+#     end = end*10+9
+#     N-=1
+
+# arr = []
+# counter = 0
+# for i in range (start, end+1):
+#     temp = i
+#     sum = 0
+#     mul = 1
+#     while temp !=0:
+#         sum = sum + (temp%10)
+#         mul = mul * (temp%10)
+#         temp = int(temp/10)
+#     if sum == mul:
+#         counter+=1
+#         print(i)
+#         arr.append(i)
+# # print(arr[0])
+# # print(counter)
+# if tempN == 1:
+#     print(10, 0)
+# else:
+#     print(counter, arr[0])
+
+# ==============================================
+
 N = int(input())
 tempN = N
 N -=1
 start = 10**(N)
-end = 9
-while N!=0:
-    end = end*10+9
-    N-=1
 
 arr = []
 counter = 0
-for i in range (start, end):
+for i in range (start, start*2):
     temp = i
     sum = 0
     mul = 1
@@ -50,7 +82,7 @@ for i in range (start, end):
         temp = int(temp/10)
     if sum == mul:
         counter+=1
-        # print(i)
+        print(i)
         arr.append(i)
 # print(arr[0])
 # print(counter)
@@ -58,4 +90,3 @@ if tempN == 1:
     print(10, 0)
 else:
     print(counter, arr[0])
-
